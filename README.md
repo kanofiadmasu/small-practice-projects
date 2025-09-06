@@ -1,6 +1,6 @@
 # Collaction of small practice projects 
 
-This repostiory is to show the collections of small projects that I built while learning programming languages, to solidfy my understanding and learn more.  
+This repostiory is to record the collection of small projects that I built while learning programming languages, to solidfy my understanding and learn more.  
 
 The resources for getting this small projects are  
 
