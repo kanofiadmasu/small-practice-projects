@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+<link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+    <div class="input_contaier">
+        <input type="text" id="expense_name" palceholder="Expense Name">
+        <input type="number" id="amout"  placeholder="Amount">
+        <input type="catagory" id="category" placeholder="Category">
+        <input type="date" id="date">
+        <button id="add_expense">Add Expense</button>
+
+    </div>
+    <h2>Expense Tracker</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Expense Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example row -->
+            <tr>
+                <td>Groceries</td>
+                <td>$50</td>
+                <td>Food</td>
+                <td>2024-06-10</td>
+                <td>
+                    <button class="action-btn">Edit</button>
+                    <button class="action-btn">Delete</button>
+                </td>
+            </tr>
+            <!-- Add more rows here -->
+        </tbody>
+    </table>
+    <script src="tracker.js"></script>
+</body>
+</html>
