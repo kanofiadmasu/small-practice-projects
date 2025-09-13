@@ -6,16 +6,17 @@
 <link rel="stylesheet" href="tracker.css">
 </head>
 <body>
-    <div class="input_contaier">
-        <input type="text" id="expense_name" palceholder="Expense Name">
+    <form class="input_contaier">
+        <input type="text" id="expense_name" placeholder="Expense Name">
         <input type="number" id="amout"  placeholder="Amount">
         <input type="catagory" id="category" placeholder="Category">
         <input type="date" id="date">
         <button id="add_expense">Add Expense</button>
 
-    </div>
+    </form>
     <h2>Expense Tracker</h2>
-    <table>
+    <div class="expense_table">
+            <table>
         <thead>
             <tr>
                 <th>Expense Name</th>
@@ -25,8 +26,9 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Example row -->
+        <!--First smaple body leve-->
+        <!-- <tbody>
+
             <tr>
                 <td>Groceries</td>
                 <td>$50</td>
@@ -37,9 +39,18 @@
                     <button class="action-btn">Delete</button>
                 </td>
             </tr>
-            <!-- Add more rows here -->
-        </tbody>
+        </tbody> -->
+
+        <tbody></tbody>
     </table>
+
+<!-- Total Expense Display -->
+        <div class = "total_expense">
+            <h3>Total: </h3> $<span id="total_amount">0</span>
+        </div>
+    </div>
+
+
     <script src="tracker.js"></script>
 </body>
 </html>
