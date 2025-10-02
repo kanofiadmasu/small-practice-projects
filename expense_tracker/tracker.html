@@ -8,8 +8,8 @@
 <body>
     <form class="input_contaier">
         <input type="text" id="expense_name" placeholder="Expense Name">
-        <input type="number" id="amout"  placeholder="Amount">
-        <input type="catagory" id="category" placeholder="Category">
+        <input type="number" id="amount"  placeholder="Amount">
+        <input type="text" id="category" placeholder="Category">
         <input type="date" id="date">
         <button id="add_expense">Add Expense</button>
 
@@ -24,24 +24,11 @@
                 <th>Category</th>
                 <th>Date</th>
                 <th>Action</th>
-            </tr>
+            </tr>   
         </thead>
-        <!--First smaple body leve-->
-        <!-- <tbody>
+            <tbody id="expense_table">
 
-            <tr>
-                <td>Groceries</td>
-                <td>$50</td>
-                <td>Food</td>
-                <td>2024-06-10</td>
-                <td>
-                    <button class="action-btn">Edit</button>
-                    <button class="action-btn">Delete</button>
-                </td>
-            </tr>
-        </tbody> -->
-
-        <tbody></tbody>
+            </tbody>
     </table>
 
 <!-- Total Expense Display -->
@@ -49,7 +36,6 @@
             <h3>Total: </h3> $<span id="total_amount">0</span>
         </div>
     </div>
-
 
     <script src="tracker.js"></script>
 </body>

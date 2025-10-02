@@ -1,19 +1,18 @@
 let expense_array = [];
 
-
+//  getting the elements from the DOM
 let expense_name = document.getElementById('expense_name');
-let amount = document.getElementById('amout');
+let amount = document.getElementById('amount');
 let category = document.getElementById('category');
 let date = document.getElementById('date');
 let add_expense = document.getElementById('add_expense');
 let expense_table = document.getElementById('expense_table');
 
+// expense adding eventlistener 
 let addButton = document.getElementById('add_expense');
-
 addButton.addEventListener('click', addExpense);
 
 function addExpense() {
-    // the proccesses are 
     // 1. get the values from the input fields
     let expense = {
         name: expense_name.value,
@@ -25,11 +24,37 @@ function addExpense() {
     // 2. add the expense to the array
     expense_array.push(expense);
 
+
     // 3. update the table
     updateTable();
 
+    // 4. clear the input fields
+    expense_name.value = '';
+    amount.value = '';
+    category.value = '';
+    date.value = '';
 }
 
-function updateTable() {
+console.log(expense_array);
+
+// here this function will update the table (attach the values to the table)
+function updateTable () {
+    expense_array.forEach( exp => {
+    let newRow = document.createElement('tr');
+    newRow.innerHTML = `
+        <td>${exp.name}</td>
+        <td>${exp.amount}</td>
+        <td>${exp.category}</td>
+        <td>${exp.date}</td>
+        <td><button class="delete_btn">Delete</button></td>
+    `;
+    expense_table.appendChild(newRow);
     
-}
+    // Delete and Edit button adding 
+    let 
+
+
+})
+
+}; 
+ 
