@@ -17,7 +17,12 @@ addButton.addEventListener('click', addExpense);
 function addExpense(event) {
     event.preventDefault();
     // 1. get the values from the input fields
-    let expense = {
+    // if the input fields are empty, do not add the expense
+    if (expense_name.value === '' || amount.value === '' || category.value === '' || date.value === '') {
+        alert('Please fill all the fields, empyty feilds are not allowed');
+        return;
+    } else {
+            let expense = {
         name: expense_name.value,
         amount: parseFloat(amount.value),
         category: category.value,
@@ -36,6 +41,8 @@ function addExpense(event) {
     amount.value = '';
     category.value = '';
     date.value = '';
+    }
+
 }
 
 console.log(expense_array);
@@ -63,7 +70,15 @@ function updateTable() {
 
     let deleteBtn = newRow.querySelector('.delete_btn');
     deleteBtn.addEventListener('click', () => { 
+       if(confirm('Are you sure you want to delete this expense?')) {
         expense_table.removeChild(newRow);
+        // also removing from the array
+        expense_array = expense_array.filter( item => item !== exp);
+        console.log(expense_array); 
+       }
+       else {
+        return;
+       }
     })
 
 })
