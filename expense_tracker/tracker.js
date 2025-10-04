@@ -8,11 +8,14 @@ let date = document.getElementById('date');
 let add_expense = document.getElementById('add_expense');
 let expense_table = document.getElementById('expense_table');
 
+
+ 
 // expense adding eventlistener 
 let addButton = document.getElementById('add_expense');
 addButton.addEventListener('click', addExpense);
 
-function addExpense() {
+function addExpense(event) {
+    event.preventDefault();
     // 1. get the values from the input fields
     let expense = {
         name: expense_name.value,
@@ -38,7 +41,13 @@ function addExpense() {
 console.log(expense_array);
 
 // here this function will update the table (attach the values to the table)
-function updateTable () {
+function updateTable() {
+    // Clear the existing table rows before updating becuase,
+    //  when it starts looping the expense_table has a row already
+    // so we need to clear the table first
+    expense_table.innerHTML = '';
+
+    // looping through the expense_array and adding the values to the table
     expense_array.forEach( exp => {
     let newRow = document.createElement('tr');
     newRow.innerHTML = `
@@ -51,10 +60,14 @@ function updateTable () {
     expense_table.appendChild(newRow);
     
     // Delete and Edit button adding 
-    let 
 
+    let deleteBtn = newRow.querySelector('.delete_btn');
+    deleteBtn.addEventListener('click', () => { 
+        expense_table.removeChild(newRow);
+    })
 
 })
 
 }; 
  
+
