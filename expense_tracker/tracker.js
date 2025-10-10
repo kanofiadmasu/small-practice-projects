@@ -8,8 +8,6 @@ let date = document.getElementById('date');
 let add_expense = document.getElementById('add_expense');
 let expense_table = document.getElementById('expense_table');
 
-
- 
 // expense adding eventlistener 
 let addButton = document.getElementById('add_expense');
 addButton.addEventListener('click', addExpense);
